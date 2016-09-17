@@ -1,0 +1,233 @@
+body{
+    
+    background-color: #000;
+    z-index: 1;
+}
+
+.dim{
+    
+    width:"100%";
+    height: 585px;
+    
+}
+
+#arrow1{
+    
+    font-size: 2em;
+    border: none;
+}
+
+.dim1{
+    
+    width:"100%";
+    height: 486px;
+    
+}
+
+.dim2{
+    
+    width:"100%";
+    height: 700px;
+    
+}
+
+.TopSellings1{
+        padding-top:2.5em;
+        background-color: #f2f2f2;
+}
+
+.TopSellings2{
+        background-color: #f2f2f2;
+}
+
+.NewArrivals1{
+        background-image: url("Images/naTemplate.jpg");
+}
+
+
+.Description1{
+    
+     background-color: #f2f2f2;
+}
+
+.Description2{
+    
+    background-image: url(Images/Template1.jpg);
+}
+
+.Artists{
+    
+    background-color: #f2f2f2;
+    
+}
+
+.Subinfo{
+    
+    background-image: url("Images/Template.jpg");
+    
+}
+
+.subinfo2{
+    
+    background-color:#f2f2f2;
+}
+
+.footer1{
+    
+    background-image: url("Images/Template2Footer.jpg");
+    background-repeat: no-repeat;
+    color:white;
+}
+
+.sampleimg{
+    
+    border-color: black;
+}
+
+.button1{
+    
+    //padding: 5px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color:#000;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid;
+    border-color: black;
+    box-shadow: 1px 1px 2px;
+    
+}
+
+.button1:hover{
+    
+    //padding: 5px;
+    border-radius: 5px;
+    background-color: #3e3e3e;
+    color:white;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.buttonalign{
+    text-align: right;
+    margin-right: 100px;
+    margin-top: 200px;
+    text-align: left;
+}
+
+.buttonalign1{
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 455px;
+}
+
+.slideralign{
+    
+    margin-top: 200px;
+    
+}
+
+.slideralign1{
+    
+    margin-top: 90px;
+    margin-left: 20px;
+    //margin-right: 50px;
+}
+
+.desalign{
+    
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.footerrow{
+    
+    margin-left: 50px;
+    //margin-right: 50px;
+}
+
+.circle{
+    
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 2px 5px;
+}
+
+.Artistrow{
+    
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.artistrow{
+    
+    padding: 25px;
+}
+
+/*NAVIGATION BAR */
+
+/*nav{
+
+    height: 35px;
+    left: 0;
+    right:0;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    top:0;
+    
+}*/
+
+.nav{
+    z-index: 400;
+	
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    padding: 0.5em;
+    
+}
+
+li{
+    
+    text-align: center;
+    float: left;
+}
+
+li a{
+    display: block;
+    width:7em;
+    color:#9d9880;
+    text-decoration: none;
+    
+}
+
+
+li a:hover{
+    
+    color:white;
+}
+
+
+
+.active{
+    color:#fff;
+}
+
+
+

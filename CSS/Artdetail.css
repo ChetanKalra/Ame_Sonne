@@ -1,0 +1,133 @@
+body{
+	background-color: black;
+}
+
+.footer{
+    
+    background-color: black;
+    background-repeat: no-repeat;
+    color:white;
+}
+
+ .logo{
+             
+                margin-left: 38.5em;
+                margin-right: 38.5em;
+            }
+.row1{
+    
+                width:100%;
+                display: block;
+                overflow: hidden;
+                
+            }
+            
+            .col1{
+               
+                height:100%;
+                width:33.333333%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .col2{
+               
+                height:100%;
+                width:25%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .col3{
+               
+                height:100%;
+                width:50%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+
+.footerrow{
+    
+    margin-left: 50px;
+    //margin-right: 50px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.dim1{
+	width:"100%";
+    height: 486px;
+}
+
+/*NAV*/
+
+.nav{
+    z-index: 400;
+	
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    padding: 0.5em;
+    
+}
+
+li{
+    
+    text-align: center;
+    float: left;
+}
+
+li a{
+    display: block;
+    width:7em;
+    color:#9d9880;
+    text-decoration: none;
+    
+}
+
+
+li a:hover{
+    
+    color:white;
+}
+
+
+
+.active{
+    color:#fff;
+}
+
+.button{
+                padding: 1.5em;
+                border-radius: 7px;
+                background-color: #f2f2f2;
+                padding-left: 30px;
+                padding-right: 30px;
+                border:1px solid #000;
+            }
+            
+            .button:hover{
+                
+                
+                background-color: #3e3e3e;
+                color:white;
+                border:none;
+                
+            }

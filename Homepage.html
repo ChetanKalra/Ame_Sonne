@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>AME SONNE</title>
+        
+        <link rel="stylesheet" href="CSS/Homepage.css" type="text/css">
+        
+        <style>
+        
+            .row1{
+    
+                width:100%;
+                display: block;
+                overflow: hidden;
+                
+            }
+            
+            .col1{
+               
+                height:100%;
+                width:33.333333%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .col2{
+               
+                height:100%;
+                width:25%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .col3{
+               
+                height:100%;
+                width:50%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .cat2{
+                
+                margin-left: 65px;
+            }
+            
+            #rl{
+                text-align: right;
+            }
+            
+            #ll{
+                
+                text-align: left;
+            }
+            
+            .logo{
+             
+                margin-left: 38.5em;
+                margin-right: 38.5em;
+            }
+            
+            .heroimage{
+                height:680px;
+                width:1265px;
+                background-image: url(Images/Frames1.jpg);
+                background-attachment: scroll;
+                animation-name: bg-move;
+                animation-duration: 20s;
+                background-size: cover;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                z-index: 2;
+				margin-top: 1em;
+                
+            }
+            @keyframes bg-move{
+                0%{
+                    transform: scale(1,1);
+                }
+                50%{
+                    transform: scale(1.05,1.05);
+                }
+                100%{
+                    transform: scale(1,1);
+                }
+            }
+            
+            .loginbutton{
+                padding: 1.5em;
+                border-radius: 7px;
+                background-color: #f2f2f2;
+                padding-left: 30px;
+                padding-right: 30px;
+                border:1px solid #000;
+            }
+            
+            .loginbutton:hover{
+                
+                
+                background-color: #3e3e3e;
+                color:white;
+                border:none;
+                
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        
+      <nav>
+            <ul>
+                
+                <li id="ll"><a href="#" class="active">Home</a></li>
+                <li id="ll"><a href="#TS">Top Charts</a></li>
+                <li id="ll"><a href="#">Categories</a></li>
+        
+                <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
+                <li id="rl" style="float:right;"><a href="LINKS/Login.html">Login</a></li>
+                <li id="rl" style="float:right;"><a href="Links/Signup.HTML">Sign Up</a></li>
+                
+                <div class="logo">
+                <img src="Images/logo.jpg" height="20px" width="30px">
+                </div>
+            </ul>
+       
+        </nav>
+        <div class="heroimage">
+            <div class="row1">
+            <center><h1 style="margin-top:2.5em; font-size:90px; color:#f2f2f2; font-family:break;position:static;">AME SONNE</h1></center>
+                <div class="row1">
+                <center><a href="LINKS/Login.html"><button class="loginbutton">LOGIN</button></a></center>
+                </div>
+                <div class="row1">
+                  <div><center><a href="#TS"><button id="arrow1" style="background-color:transparent;">&#8910;</button></a></center></div>  
+                </div>
+            </div>
+        </div>
+        
+        <div class="TopSellings1 dim" id="TS">
+           <div class="row1"> 
+            <div class="row1">
+            <center><h1 style="color:#000; font-family:monospace; font-size:40px; font-weight:600;">TOP SELLINGS</h1></center>
+                <hr style="margin-left:33%; margin-right:33%;">
+            </div>
+            
+            <div class="row1">
+                <div class="col1">
+                    <div class="row1">
+                    <a href="#"><img src="Images/ts1.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    </div>
+                </div>
+                
+                <div class="col1">
+                    <a href="#"><img src="Images/ts2.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+                
+                <div class="col1">
+                    <a href="#"><img src="Images/ts3.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+            </div> 
+            
+            
+            </div>
+            
+        </div>
+        
+        <div class="TopSellings2 dim">
+            
+            <div class="row1">
+                <div class="col1">
+                        <a href="#"><img src="Images/ts5.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+                
+                <div class="col1">
+                    <a href="LINKS/ArtDetail.php"><img src="Images/ts4.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+                
+                <div class="col1">
+                    <a href="#"><img src="Images/ts6.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+            </div> 
+            
+            <div class="row1">
+            <center><button class="button1"><h4>SEE MORE</h4></button></center>
+            </div>
+            
+        </div>
+        
+        <div class="NewArrivals1 dim2">
+            
+            <div class="row1"> 
+            <div class="row1">
+            <center><h1 style="color:#f2f2f2; font-family:monospace; font-size:40px; font-weight:600;">NEW ARRIVALS</h1></center>
+                <hr style="margin-left:33%; margin-right:33%;">
+            </div>
+            
+            <div class="row1">
+                <div class="col1">
+                    <div class="row1">
+                        <a href="#"><img src="Images/na2.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    </div>
+                </div>
+                
+                <div class="col1">
+                    <a href="#"><img src="Images/na3.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+                
+                <div class="col1">
+                    <a href="#"><img src="Images/na1.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                </div>
+            </div> 
+            
+                <div class="row1">
+            <center><button class="button1"><h4>SEE MORE</h4></button></center>
+            </div>
+            
+            </div>
+        </div>
+        
+        <div class="Description1 dim">
+            <hr>
+           <div class="Artistrow"> 
+            <div class="row1">
+                <div class="row1">
+                    <center><h1 style="color:#000; font-family:monospace; font-size:40px; font-weight:600;">ARTISTS</h1></center>
+                    <hr style="margin-left:33%; margin-right:33%;">
+                </div>
+                <br><br><br>
+                
+                <div class="col2">
+                    <div class="row1">
+                    <center><img src="Images/at1.jpg" class="circle"></center>
+                        </div>
+                    <div class="row1">
+                        <br>
+                        <p>The greatness of art is not to find what is common but what is unique.</p>
+                        <p style="color:#777;">-Isaac Bashevis Singer</p>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="row1">
+                        <center><img src="Images/ArtistVN.jpg" class="circle"></center>
+                        </div>
+                    <div class="row1">
+                        <br>
+                        <p>Art is not what you see, but what you make other see.</p>
+                        <p style="color:#777;">-Vijeta Nayak</p>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="row1">
+                        <center><img src="Images/at3.jpg" class="circle"></center>
+                        </div>
+                    <div class="row1">
+                        <br>
+                        <p>Vision is the art of seeing what is invisible to others.</p>
+                        <p style="color:#777;">-Jonathan Swift</p>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="row1">
+                        <center><img src="Images/at4.jpg" class="circle"></center>
+                        </div>
+                    <div class="row1">
+                        <br>
+                        <p>The purpose of art is washing the dust of daily life off our souls. </p>
+                        <p style="color:#777;">-Pablo Picasso</p>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        
+        <div class="Description2 dim">
+            <!--<br><br><br><br><br><br><br><br>-->
+            
+           
+                <div class="col3">
+                    <div class="slideralign">
+                        <center><img src="Images/HomepageImgs/rose.jpg" width="450" height="300"></center>
+                    </div>
+                </div>
+        
+                <div class="col3">
+                    <div class="buttonalign">
+                        
+                        <div class="row1">
+                            <h1 style="color:white;">ARTISTS</h1>
+                            <p style="color:white;">Ame Sonne fosters a community of contemporary emerging artists. Each artist website is independent but also part of Amesonne.com. A well designed and personally customized artist website is central to an artistic career. It is where visitors go to see your work and follow your career. You can also sell art from your artist website as well as through the Artspan online gallery. Sell original artwork and, at your option, prints produced with quality archival materials. Ame Sonne was founded by artists. We understand your problems and work with you in selling your art and growing your career. Join our international community of skilled and original artists today.</p>
+                        </div>
+                        <div class="row1" style="text-align:right;">
+                            <button class="button1"><h4>EXPLORE</h4></button>
+                            
+                        </div>
+                    </div>
+                </div>
+           
+            
+        </div>
+        
+        <div class="Artists dim1">
+            <div class="artistrow">
+            <div class="col3 desalign">
+                
+                <div class="row1">
+                    <h1>ART COLLECTOR</h1>
+                    <p style="">Buying art on Ame Sonne is like taking a trip through individual artists' galleries. You get to know the artists and their work. You learn their story and form a connection with the artist. With Artspan, you deal directly with the artist, so you know you're getting the very best price. On most gallery sites the transaction is impersonal, and prices are inflated to cover commissions, shipping, and other fees. Find fine art in any medium - either originals or archival prints, from over 4,000 artists in 51 countries. Our community includes established artists and the next big name, and we have art for any collector in any price range. Connecting buyers with artists has never been easier.</p>
+                
+                </div>
+                
+                <div class="row1">
+                        <button class="button1"><h4>EXPLORE</h4></button>
+                </div>
+            
+                
+            </div>
+            <div class="col3">
+                <div class="slideralign1">
+                        <!--<center><img src="Images/ts1.jpg" width="450" height="300"></center>-->
+                        <center><video controls width="450" height="300">
+                            <source src="Videos/Girl%20with%20the%20soft%20summer%20Gaze%20-%20Time-lapse%20portrait%20art%20drawing%20video.mp4" type="video/mp4">
+                        </video></center>
+                    
+                    </div>
+            
+            </div>
+                </div>
+            
+        </div>
+        
+       <!-- <div class="Subinfo dim">
+            
+        </div>
+        
+        <div class="subinfo2 dim">
+            
+        </div>-->
+        
+        <div class="footer1 dim1" id="Contactdiv">
+            
+            <br><br><br><br><br><br><br><br>
+           <div class="footerrow"> 
+            <div class="row1">
+            <div class="col1">
+               
+                
+                <div class="row1">
+                    <h3>Categories</h3>
+                    <hr style="margin-right:60px">
+                    <br>
+                </div>
+                
+                <div class="row1">
+                    <div class="col1 cat1">
+                        <a href="#">Nature</a><br>
+                <a href="#">Design</a><br>
+                <a href="#">Abstract Style</a><br>
+                <a href="#">Impressionism</a><br>
+                <a href="#">Expressionism</a><br>
+                <a href="#">The Eastern Style</a><br>
+                <a href="#">Still life</a><br>
+                <a href="#">Acrylics</a><br>
+                    </div>
+                    
+                    <div class="col1 cat2">
+                        <a href="#">Painting Potentials</a><br>
+                    <a href="#">Arts</a><br>
+                    <a href="#">Photography</a><br>
+                    <a href="#">Sketches</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="col1">
+            <div class="row1"><h3>About</h3>
+                    <hr style="margin-right:60px">
+                <br>
+                </div>
+                
+                <div class="row1">
+                
+                <a href="#">Help</a><br>
+                <a href="#">Return Policy</a><br>
+                <a href="#">Community</a><br>
+                    <a href="#">Careers</a><br>
+               </div> 
+                
+            </div>
+            
+            <div class="col1">
+              
+                <div class="row1">
+               <h3>Contact Us</h3>
+                <hr style="margin-right:60px;">
+                    
+                    </div>
+                <div class="row1">
+                <p>795 Folsom Ave, Suite 600<br>
+                    San Francisco, CA 94107<br>
+                    P: (123) 456-7890</p>
+                </div>
+            </div>
+            </div>
+               </div>
+            <br><br><br>
+            <div class="row1">
+            <center><h5>&copy;AME SONNE PRODUCTION LTD  |  ALL RIGHTS RESERVED.</h5></center>
+            </div>
+            
+            
+        </div>
+        
+        <script>
+            
+            
+            $("#arrow1").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".TopSellings1").offset().top},
+        'slow');
+});
+        </script>
+        
+    </body>
+</html>
