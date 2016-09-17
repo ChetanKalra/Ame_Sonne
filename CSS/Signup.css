@@ -118,3 +118,31 @@ input::-webkit-input-placeholder {
     outline-style: none;
     z-index: 1;
 }
+
+#Ques{
+	
+	font-size: 20px;
+	color:#3e3e3e;
+	font-weight: 300;
+}
+
+.drop{
+	margin-top: 2.7em;
+	width: 12em;
+}
+
+#modifyhr{
+	margin-top: -2em;
+	color: black;
+	height: 1.5px;
+	background-color: #3e3e3e;
+	border: none;
+}
+
+#modifyhr1{
+	margin-top: -1em;
+	color: black;
+	height: 1.5px;
+	background-color: #3e3e3e;
+	border: none;
+}

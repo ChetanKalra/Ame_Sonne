@@ -46,6 +46,7 @@
                 position: absolute;
                 
             }
+			
         
         </style>
         
@@ -111,17 +112,38 @@
                 
                 <div class="row">
                     <div class="col">
-                <input type="password" name="ConfirmPassword" placeholder="Confirm Password" class="box" autocomplete="off"/></div>
+                <input type="password" name="ConfirmPassword" placeholder="Confirm Password" class="box" autocomplete="off" onblur="ConfirmValidation()"/></div>
                 
                     <div class="col">
                         <div id="ConfirmError">
                         </div> 
                     </div>
-                </div>   
-
-                
+                </div> 
+				 
+				 <div class="row">
+                    
+					 	<div class="col">
+					 
+							<h4 id="Ques">Are You a Buyer or a Seller?</h4>
+							<hr id="modifyhr1">
+					 	</div>
+					 
+					 	<div class="col">
+						<select name="type" class="drop">
+                                <option value="1" selected>Buyer</option>
+                                <option value="2">Seller</option>
+                            </select>
+					 	 
+					 </div>
+				
+				 </div>
+				 
+				 				 
+				 
+             
                 <div class="row" id="temp">
-                    <div class="col">
+                   <!-- <hr id="modifyhr"> -->
+					<div class="col">
                    <input type="submit" value="SUBMIT" class="btn"/>
                     
                     <input type="reset" value="RESET" class="btn"/>
@@ -307,6 +329,8 @@
             }
             
             function ConfirmValidation(){  
+				var x= document.getElementById("pass").value;
+				
                 var y= document.signup.ConfirmPassword.value;
                 if(x!=y)
                     {
@@ -314,6 +338,9 @@
                         //document.signup.ConfirmPassword.focus();
                         return false;
                     }
+				else{
+					document.getElementById("ConfirmError").innerHTML="<h3 id='tick'>&#10003;</h3>";	
+				}
             }
             
             function validateForm(){
