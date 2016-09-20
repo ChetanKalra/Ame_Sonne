@@ -107,8 +107,9 @@
 			}
 		
 			
+						if(isset($user_id)) 
+							$act= 'Bookedorder.php?Product_id='.$ID.'&Id='.$user_id; 
 						
-			$act= 'Login.php?redirect=1&Product_id='.$ID.'&Category_id='.$CatID;
 			
 			//print_r($row1[4]);
 			//exit;
@@ -142,23 +143,23 @@
 	</head>
 	<body>
 		
-		<nav>
+		 <nav>
             <ul>
-            
-                <li id="ll"><a href="../Homepage.php">Top Charts</a></li>
+                
+             
+                <li id="ll"><a href="#TS">Top Charts</a></li>
                 <li id="ll"><a href="#">Categories</a></li>
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
-                <li id="rl" style="float:right;"><a href="../LINKS/Login.php?redirect=0">Login</a></li>
-                <li id="rl" style="float:right;"><a href="../Links/Signup.HTML">Sign Up</a></li>
+                <li id="rl" style="float:right;"><a href="../Homepage.php">Logout</a></li>
+                
                 
                 <div class="logo">
-                <a href="../Homepage.php"><img src="../Images/logo1.jpg" height="20px" width="30px"></a>
+                <a href="../Buyer_home.php?Id=<?php echo $user_id ?>"><img src="../Images/logo1.jpg" height="20px" width="30px"></a>
                 </div>
             </ul>
        
-        </nav>
-		
+        </nav> 
 		<div class="ArtDetails">
 		
 			<div class="col1">
@@ -171,7 +172,7 @@
 				<div class="desc">
 					<h3>Order Now</h3><br/>
 					
-					<h3>Quantity:</h3><form id="f1" class=".qtyform" method="POST" action="Login.php?redirect=1&Product_id=<?php echo $ID;?>&Category_id=<?php echo $CatID;?>">
+					<h3>Quantity:</h3>		<form id="f1" class=".qtyform" method="POST" action="<?php echo $act ?>">
 										
 												<input type='text' name='qty' id='qty' value='1' class="field" />
 										
@@ -228,16 +229,16 @@
 			
 			<div class="box">
 				<div class="col1">
-					<a href="../LINKS/ArtDetail.php?Product_id=<?php print_r($results[1]['Product_id'])?>&Category_id=<?php print_r($results[1]['Category'])?>&Id=<?php echo $user_id ?>"><img src="../<?php print_r($results[1]['img_path']);?>" class="img" width="350" height="400"></a>
+					<a href="../LINKS/ArtDetailsLoggedIn.php?Product_id=<?php print_r($results[1]['Product_id'])?>&Category_id=<?php print_r($results[1]['Category'])?>&Id=<?php echo $user_id ?>"><img src="../<?php print_r($results[1]['img_path']);?>" class="img" width="350" height="400"></a>
 
 				</div>
 
 				<div class="col1">
-					<a href="../LINKS/ArtDetail.php?Product_id=<?php print_r($results[2]['Product_id'])?>&Category_id=<?php print_r($results[2]['Category'])?>&Id=<?php echo $user_id ?>"><img src="../<?php print_r($results[2]['img_path']);?>" class="img" width="350" height="400"></a>
+					<a href="../LINKS/ArtDetailsLoggedIn.php?Product_id=<?php print_r($results[2]['Product_id'])?>&Category_id=<?php print_r($results[2]['Category'])?>&Id=<?php echo $user_id ?>"><img src="../<?php print_r($results[2]['img_path']);?>" class="img" width="350" height="400"></a>
 				</div>
 
 				<div class="col1">
-					<a href="../LINKS/ArtDetail.php?Product_id=<?php print_r($results[3]['Product_id'])?>&Category_id=<?php print_r($results[3]['Category'])?>&Id=<?php echo $user_id ?>"><img src="../<?php print_r($results[3]['img_path']);?>" class="img" width="350" height="400"></a>
+					<a href="../LINKS/ArtDetailsLoggedIn.php?Product_id=<?php print_r($results[3]['Product_id'])?>&Category_id=<?php print_r($results[3]['Category'])?>&Id=<?php echo $user_id ?>"><img src="../<?php print_r($results[3]['img_path']);?>" class="img" width="350" height="400"></a>
 				</div>
 			</div>
 			
@@ -266,13 +267,10 @@
                 <a href="#">Nature</a><br>
                 <a href="#">Design</a><br>
                 <a href="#">Abstract Style</a><br>
-                
                     </div>
                     
                     <div class="col1 cat2">
-                      
-                    
-                    <a href="#">Photography</a><br>
+                        <a href="#">Photography</a><br>
                     <a href="#">Sketches</a>
                     </div>
                 </div>

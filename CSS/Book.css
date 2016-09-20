@@ -1,0 +1,182 @@
+body{
+    
+	background-color: #f2f2f2;
+    background-size: cover;
+}
+
+.outer{
+    
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: absolute;
+}
+
+.row1{
+    
+                width:100%;
+                display: block;
+                overflow: hidden;
+                
+            }
+            
+            .col1{
+               
+                height:100%;
+                width:33.333333%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .col2{
+               
+                height:100%;
+                width:25%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+            
+            .col3{
+               
+                height:100%;
+                width:40%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+
+.container{
+    display: table-cell;
+    padding-top: 1em;
+    background-color: white;
+    opacity: 0.7;
+    width: 38em;
+    align-content: center;
+    vertical-align: middle;
+    padding-bottom: 1.5em;
+    height: 500px;
+    display: block;
+    margin: auto;
+    padding: auto;
+}
+
+.btn{
+    background-color: transparent;
+    color:black;
+  
+    font-size: 13px;
+    border-radius: 5px;
+ 
+    border-width: 1px;
+    border-color: #777;
+    border-style: solid;
+    font-weight: 100;
+	padding-left:15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+    
+}
+a{
+	text-decoration: none;
+}
+
+.btn:hover{
+    
+    color:black;
+    background-color: #f2f2f2;
+}
+
+.box{
+    
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: black;
+    border-bottom-color: black;
+    
+}
+
+input:focus{
+    
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: #000;
+    color:black;
+}
+
+input {
+    width: 440px;
+    height: 30px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    color:#3e3e3e;
+}
+.row{
+    
+    padding-top: 20px;
+    
+}
+
+.Homebutton{
+    
+    text-align: right;
+    padding-right: 9em;
+    
+}
+
+.homebtn{
+    
+    position: fixed;
+    background-color: transparent;
+    color:black;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0.8em;
+    border-width: 1px;
+    border-color: #777;
+    border-style:dashed;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    border: 1px solid;
+    outline-style: none;
+    z-index: 1;
+}
+
+#Ques{
+	
+	font-size: 20px;
+	color:#3e3e3e;
+	font-weight: 300;
+}
+
+.drop{
+	margin-top: 2.7em;
+	width: 12em;
+}
+
+
+.CustInfo{
+	
+	margin-left: 2em;
+}
+
+.OrderInfo{
+	
+	margin-left: 18em;
+}

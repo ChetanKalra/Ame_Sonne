@@ -111,24 +111,56 @@
                 
             }
         </style>
-        
+		
+		<?php
+		
+			$con= mysqli_connect("localhost","root","","Art_Gallery");
+			$query="select * from products";
+			$res= mysqli_query($con,$query);	
+		
+			/*while ($row = mysqli_fetch_row($res)) {
+   				//echo $row->img_path."<br/>";
+				var_dump($row);
+				//print_r($row->Price); 
+				echo "<br/>";
+				
+			}*/
+			$results= array();
+			$i=1;
+			while($row=mysqli_fetch_array($res))
+			{
+				$results[$i] = $row;
+				$i++;
+			}
+			//print_r($results);exit;
+			//$row = mysqli_fetch_array($res);
+			//var_dump($results);
+			
+			//print_r($results[1]);
+			//exit;
+			//print_r($row->Price); echo "<br/>";
+			//print_r($res);
+			//$row = $res->fetch_assoc(); 
+		
+		?>
+		
+		
     </head>
 
     <body>
         
       <nav>
             <ul>
-                
-                <li id="ll"><a href="#" class="active">Home</a></li>
+            
                 <li id="ll"><a href="#TS">Top Charts</a></li>
                 <li id="ll"><a href="#">Categories</a></li>
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
-                <li id="rl" style="float:right;"><a href="LINKS/Login.php">Login</a></li>
+                <li id="rl" style="float:right;"><a href="LINKS/Login.php?redirect=0">Login</a></li>
                 <li id="rl" style="float:right;"><a href="Links/Signup.HTML">Sign Up</a></li>
                 
                 <div class="logo">
-                <img src="Images/logo.jpg" height="20px" width="30px">
+                <a href="#"><img src="Images/logo1.jpg" height="20px" width="30px"></a>
                 </div>
             </ul>
        
@@ -137,7 +169,7 @@
             <div class="row1">
             <center><h1 style="margin-top:2.5em; font-size:90px; color:#f2f2f2; font-family:break;position:static;">AME SONNE</h1></center>
                 <div class="row1">
-                <center><a href="LINKS/Login.php"><button class="loginbutton">LOGIN</button></a></center>
+                <center><a href="LINKS/Login.php?redirect=0"><button class="loginbutton">LOGIN</button></a></center>
                 </div>
                 <div class="row1">
                   <div><center><a href="#TS"><button id="arrow1" style="background-color:transparent;">&#8910;</button></a></center></div>  
@@ -155,16 +187,16 @@
             <div class="row1">
                 <div class="col1">
                     <div class="row1">
-                    <a href="#"><img src="Images/ts1.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=5&Category_id=1"><img src='<?php print_r($results[5]['img_path']);?>' style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                     </div>
                 </div>
                 
                 <div class="col1">
-                    <a href="#"><img src="Images/ts2.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=26&Category_id=4"><img src="<?php print_r($results[26]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
                 
                 <div class="col1">
-                    <a href="#"><img src="Images/ts3.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=21&Category_id=3"><img src="<?php print_r($results[21]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
             </div> 
             
@@ -177,15 +209,15 @@
             
             <div class="row1">
                 <div class="col1">
-                        <a href="#"><img src="Images/ts5.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetail.php?Product_id=3&Category_id=1"><img src="<?php print_r($results[3]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
                 
                 <div class="col1">
-                    <a href="LINKS/ArtDetail.php"><img src="Images/ts4.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=33&Category_id=5"><img src="<?php print_r($results[33]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
                 
                 <div class="col1">
-                    <a href="#"><img src="Images/ts6.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=15&Category_id=3"><img src="<?php print_r($results[15]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
             </div> 
             
@@ -206,16 +238,16 @@
             <div class="row1">
                 <div class="col1">
                     <div class="row1">
-                        <a href="#"><img src="Images/na2.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetail.php?Product_id=7&Category_id=2"><img src="<?php print_r($results[7]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                     </div>
                 </div>
                 
                 <div class="col1">
-                    <a href="#"><img src="Images/na3.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=23&Category_id=4"><img src="<?php print_r($results[23]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
                 
                 <div class="col1">
-                    <a href="#"><img src="Images/na1.jpg" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=34&Category_id=5"><img src="<?php print_r($results[34]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
                 </div>
             </div> 
             
@@ -346,7 +378,7 @@
             
         </div>-->
         
-        <div class="footer1 dim1" id="Contactdiv">
+        <div class="footer1" id="Contactdiv">
             
             <br><br><br><br><br><br><br><br>
            <div class="footerrow"> 
@@ -362,19 +394,13 @@
                 
                 <div class="row1">
                     <div class="col1 cat1">
-                        <a href="#">Nature</a><br>
+                <a href="#">Nature</a><br>
                 <a href="#">Design</a><br>
                 <a href="#">Abstract Style</a><br>
-                <a href="#">Impressionism</a><br>
-                <a href="#">Expressionism</a><br>
-                <a href="#">The Eastern Style</a><br>
-                <a href="#">Still life</a><br>
-                <a href="#">Acrylics</a><br>
+                
                     </div>
                     
                     <div class="col1 cat2">
-                        <a href="#">Painting Potentials</a><br>
-                    <a href="#">Arts</a><br>
                     <a href="#">Photography</a><br>
                     <a href="#">Sketches</a>
                     </div>

@@ -1,0 +1,25 @@
+create table users( Id int(11) AUTO_INCREMENT PRIMARY KEY, Name varchar(55) not null, Email varchar(100) UNIQUE not null, Age int(4) not null, Dob varchar(55), Password varchar(100) not null, Type int(2) not null );
+
+CREATE TABLE products(
+    
+    Product_id int(11) AUTO_INCREMENT PRIMARY KEY,
+    Price int(10) not null,
+    Quantity int(10) not null,
+    Category int(5),
+    img_path varchar(100) 
+    
+    );
+
+create table Booked_Products(
+    
+    Order_no int(11) AUTO_INCREMENT PRIMARY KEY,
+    Cust_id int(11) not null,
+    Order_id int(11) not null,
+    Quantity int(11),
+    Total int(11),
+    Shipping_address varchar(255) not null,
+    Contact int(20) not null,
+    CONSTRAINT Booked_fk FOREIGN KEY(Cust_id) REFERENCES users(Id),
+    CONSTRAINT Booked_products_fk FOREIGN KEY(Order_id) REFERENCES products(Product_id)
+    
+    );

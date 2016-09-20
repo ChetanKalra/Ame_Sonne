@@ -2,6 +2,12 @@ body{
 	background-color: black;
 }
 
+.col{
+	float: left;
+	
+            
+}
+
 .footer{
     
     background-color: black;
@@ -52,10 +58,19 @@ body{
                 
             }
 
+			.col4{
+               
+                height:100%;
+                width:66.66%;
+                display: block;
+                float: left;
+                overflow: hidden;
+                
+            }
+
 .footerrow{
     
     margin-left: 50px;
-    //margin-right: 50px;
 }
 
 a{
@@ -115,7 +130,7 @@ li a:hover{
 }
 
 .button{
-                padding: 1.5em;
+                padding: 1.3em;
                 border-radius: 7px;
                 background-color: #f2f2f2;
                 padding-left: 30px;
