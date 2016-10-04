@@ -3,18 +3,21 @@
 <html>
 
 	<head>
+		<?php
+		
+			session_start();
+		
+		?>
 		<title>Your Orders</title>
 		<?php
 
+			//echo $_SESSION['user'];exit;
 			global $ID;
 			$ID = $_GET['Product_id'];
 
 			global $Qty;
 			$Qty = $_GET['Quantity'];
-			
-			global $user_id;
-			$user_id = $_GET['Id'];
-		
+	
 			$random= rand(1,10000);
 			
 
@@ -22,22 +25,29 @@
 			$Contact= $_POST['no'];
 
 			$con= mysqli_connect("localhost","root","","Art_Gallery");
-			$query="select Price from products where Product_id=$ID";
+			$query="select Price, Quantity from products where Product_id=$ID";
 			$res=mysqli_query($con, $query);
 			$row1= mysqli_fetch_row($res);
 
 			$PerPrice= $row1[0];
 			$total= $PerPrice*$Qty;
-			
+		
+			$InitialQuantity= $row1[1];
+			$UpdatedQuantity= $InitialQuantity-$Qty;
+		
 			$Year= date('Y');
 			$Month= date('m');
 			$Day= date('d');
 			$Order_Date= $Year."/".$Month."/".$Day;
-			$Order_Number= ($ID+$user_id+$Qty+$Day+$Month+$random)*31+723;
+			$Order_Number= ($ID+$_SESSION['user']+$Qty+$Day+$Month+$random)*31+723;
+		
+		
+			$con= mysqli_connect("localhost","root","","Art_Gallery");
+			$query="insert into Booked_Products(Order_no, Cust_id, Order_id, Order_Quantity, Total, Shipping_address, Contact,Order_Date,Status) values($Order_Number,$_SESSION[user],$ID,$Qty,$total,'$Ship',$Contact,'$Order_Date','Pending')";
+			mysqli_query($con, $query);
 			
-			/*$con= mysqli_connect("localhost","root","","Art_Gallery");
-			$query="insert into Booked_Products(Order_no, Cust_id, Order_id, Quantity, Total, Shipping_address, Contact,Order_Date) values($Order_Number,$user_id,$ID,$Qty,$total,'$Ship',$Contact,'$Order_Date')";
-			$res=mysqli_query($con, $query);*/
+			$query1="update products set Quantity=$UpdatedQuantity where Product_id=$ID";
+			mysqli_query($con, $query1);
 			//echo "done";
 		?>
 		
@@ -85,7 +95,7 @@
 	 <body>
       <div class="outer">
           <div class="Homebutton">
-              <a href="../Buyer_home.php?Id=<?php echo $user_id ?>"><button class="homebtn">HOME</button></a>
+              <a href="../Buyer_home.php"><button class="homebtn">HOME</button></a>
           </div>
         <form method="post" action="" onsubmit="" name="Bookedorder">
             <div class="container">

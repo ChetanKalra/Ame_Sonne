@@ -43,12 +43,17 @@
 			
         
         </style>
+		<?php
+			
+			session_start();
+		
+		?>
 		
 		<?php
 		
-		global $user_id;
-		$user_id= $_GET['Id'];
-		
+		//global $user_id;
+		//$user_id= $_GET['Id'];
+		//echo $_SESSION['user'];exit;
 		?>
 		
 	</head>
@@ -58,7 +63,7 @@
           <div class="Homebutton">
               <a href="Buyer_home.php"><button class="homebtn">HOME</button></a>
           </div>
-        <form method="POST" action="LINKS/Uploadfile.php?Id=<?php echo $user_id ?>" onsubmit="return validateForm()" name="upload" enctype="multipart/form-data">
+        <form method="POST" action="LINKS/Uploadfile.php?Id=<?php echo $_SESSION["user"] ?>" onsubmit="return validateForm()" name="upload" enctype="multipart/form-data">
             <div class="container">
             <center style="font-family:monospace;font-size:55px;padding-top:15px;">Upload(1/2)</center>
         

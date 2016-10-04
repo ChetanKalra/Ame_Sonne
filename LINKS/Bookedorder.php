@@ -4,6 +4,12 @@
 	<head>
 		<title>Register</title>
         <link href="../CSS/Bookedorder.css" type="text/css" rel="stylesheet">
+		
+		<?php
+		
+			session_start();
+		
+		?>
         
         <style>
         
@@ -33,13 +39,6 @@
                 padding-top: 3em;
                 
             }
-            
-            #tick{
-                
-                color:green;
-                position: absolute;
-                
-            }
 			
         
         </style>
@@ -55,9 +54,11 @@
 			if(isset($_POST['qty']))
 			{
 				$qty= $_POST['qty'];
+				$_SESSION["qty"]=$qty;
 			}
 			else{
 				$qty= $_GET['Quantity'];
+				$_SESSION["qty"]=$qty;
 			}
 		
 		?>
@@ -69,7 +70,7 @@
           <div class="Homebutton">
               <a href="../Homepage.php"><button class="homebtn">HOME</button></a>
           </div>
-        <form method="post" action="Book.php?Product_id=<?php echo $ID;?>&Quantity=<?php echo $qty;?>&Id=<?php echo $user_id?>" onsubmit="" name="confirm">
+        <form method="post" action="Book.php?Product_id=<?php echo $ID;?>&Quantity=<?php echo $_SESSION['qty'];?>&Id=<?php echo $user_id?>" onsubmit="" name="confirm">
             <div class="container">
             <center style="font-family:monospace;font-size:45px;padding-top:15px;">Confirm Order</center>
         	<br/><br/>

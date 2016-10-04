@@ -4,6 +4,11 @@
 	<head>
 		<title>Art Detail</title>
 		<link href="../CSS/ArtDetail.css" type="text/css" rel="stylesheet">
+		<?php
+		
+			session_start();
+		
+		?>
 		<style>
 		
 			.img{
@@ -90,11 +95,9 @@
 			
 			global $CatID, $user_id;
 			$CatID = $_GET['Category_id'];
-			$user_id= $_GET['Id'];
-			
 		
 			$con= mysqli_connect("localhost","root","","Art_Gallery");
-			$query="select * from products where Category=$CatID";
+			$query="select * from products where Category=$CatID and Product_id!=$ID";
 			$res=mysqli_query($con, $query);
 			
 			$results= array();
@@ -107,12 +110,13 @@
 			}
 		
 			
-						if(isset($user_id)) 
-							$act= 'Bookedorder.php?Product_id='.$ID.'&Id='.$user_id; 
 						
-			
-			//print_r($row1[4]);
-			//exit;
+			$act= 'Bookedorder.php?Product_id='.$ID.'&Id='.$_SESSION["user"]; 
+						
+			global $AvailableQty;
+			$AvailableQty= $row1[2];
+					
+		
 		?>
 		
 		<script type="text/javascript">
@@ -147,15 +151,15 @@
             <ul>
                 
              
-                <li id="ll"><a href="#TS">Top Charts</a></li>
-                <li id="ll"><a href="#">Categories</a></li>
+                <li id="ll"><a href="OrderDetails.php">Your Orders</a></li>
+                <!--<li id="ll"><a href="#">Categories</a></li>-->
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
                 <li id="rl" style="float:right;"><a href="../Homepage.php">Logout</a></li>
                 
                 
                 <div class="logo">
-                <a href="../Buyer_home.php?Id=<?php echo $user_id ?>"><img src="../Images/logo1.jpg" height="20px" width="30px"></a>
+                <a href="../Buyer_home.php"><img src="../Images/logo1.jpg" height="20px" width="30px"></a>
                 </div>
             </ul>
        
@@ -172,7 +176,7 @@
 				<div class="desc">
 					<h3>Order Now</h3><br/>
 					
-					<h3>Quantity:</h3>		<form id="f1" class=".qtyform" method="POST" action="<?php echo $act ?>">
+					<h3>Quantity:</h3>		<form id="f1" class=".qtyform" method="POST" action="<?php echo $act ?>" onsubmit="return check(<?php print_r($row1[2])?>)">
 										
 												<input type='text' name='qty' id='qty' value='1' class="field" />
 										
@@ -182,6 +186,9 @@
 											
 												<input type='button' name='subtract' value='-'/>
 												<br/><br/>
+												<div class="row1" id="error">
+													
+												</div>
 												<div class="row1">	
 										
 													<div class="col">
@@ -193,6 +200,8 @@
 													else 
 														echo "<h3 style='color:red;'>Out of Stock</h3>"; ?>
 													</div>
+													
+													
 												</div>
 												
 												<div class="row1">
@@ -264,14 +273,14 @@
                 
                 <div class="row1">
                     <div class="col1 cat1">
-                <a href="#">Nature</a><br>
-                <a href="#">Design</a><br>
-                <a href="#">Abstract Style</a><br>
+                <a href="Category.php?Cat=3">Nature</a><br>
+                <a href="Category.php?Cat=2">Black &amp; White</a><br>
+                <a href="Category.php?Cat=1">Abstract Style</a><br>
                     </div>
                     
                     <div class="col1 cat2">
-                        <a href="#">Photography</a><br>
-                    <a href="#">Sketches</a>
+                        <a href="Category.php?Cat=4">Photography</a><br>
+                    <a href="Category.php?Cat=5">Sketches</a>
                     </div>
                 </div>
                 
@@ -316,6 +325,23 @@
             
 		
 		</div>
+		
+		<script>
+		
+			function check(AvailableQty){
+				//alert(AvailableQty);
+				var enteredQty= document.getElementById('qty').value;
+				
+				//alert(enteredQty);
+				if(enteredQty>AvailableQty)
+					{
+						document.getElementById('error').innerHTML="Only "+AvailableQty+" left in Stock";
+						return false;
+					}
+				
+			}
+			
+		</script>
 		
 	</body>
 

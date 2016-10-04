@@ -82,7 +82,7 @@
 			$query="select * from products where Product_id=$ID";
 			$res=mysqli_query($con, $query);
 			$row1= mysqli_fetch_row($res);
-			//print_r($row1[4]);
+			//print_r($row1);exit;
 			//exit;
 		?>
 		
@@ -94,7 +94,7 @@
 			
 		
 			$con= mysqli_connect("localhost","root","","Art_Gallery");
-			$query="select * from products where Category=$CatID";
+			$query="select * from products where Category=$CatID and Product_id!=$ID";
 			$res=mysqli_query($con, $query);
 			
 			$results= array();
@@ -143,10 +143,10 @@
 	<body>
 		
 		<nav>
-            <ul>
+           <ul>
             
                 <li id="ll"><a href="../Homepage.php">Top Charts</a></li>
-                <li id="ll"><a href="#">Categories</a></li>
+                <!--<li id="ll"><a href="#">Categories</a></li>-->
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
                 <li id="rl" style="float:right;"><a href="../LINKS/Login.php?redirect=0">Login</a></li>

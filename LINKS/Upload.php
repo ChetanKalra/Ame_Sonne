@@ -55,7 +55,7 @@ if ($uploadOk == 0) {
 		$Price= $_GET['Price'];
 		$Quantity= $_GET['Quantity'];
 		$Category= $_GET['Category'];
-	$user_id= $_GET['Id'];
+		$user_id= $_GET['Id'];
 
 	$con= mysqli_connect("localhost","root","","Art_Gallery");
 	$query="insert into products(Price, Quantity, Category, img_path, Name) VALUES($Price, $Quantity, $Category,'IMAGES/uploads/$File_name' ,'$Name')";

@@ -23,3 +23,10 @@ create table Booked_Products(
     CONSTRAINT Booked_products_fk FOREIGN KEY(Order_id) REFERENCES products(Product_id)
     
     );
+
+
+select order_id, COUNT(Order_id) from Booked_Products where Order_id IN(select DISTINCT Order_id from Booked_Products) GROUP By Order_id
+
+select * from products where product_id IN(select order_id from Booked_Products where Order_id IN(select DISTINCT Order_id from Booked_Products) GROUP By Order_id order by Count(Order_id) desc limit 6);
+
+

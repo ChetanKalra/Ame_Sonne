@@ -5,6 +5,12 @@
 		<title>Login</title>
         <link href="../CSS/Login.css" type="text/css" rel="stylesheet">
 		
+		<?php
+		
+			session_start();
+		
+		?>
+		
         <style>
         
              .btn,.btn1{
@@ -48,6 +54,7 @@
 			}
             
         </style>
+	
 		
     </head>
 	
@@ -90,7 +97,6 @@
 			global $redirect,$ID, $CatID,$qty;
 			$redirect= $_GET['redirect'];
 			
-			
 		
 			if(isset($_GET['Product_id']))
 			{
@@ -103,10 +109,9 @@
 			if(isset($_POST['qty']))
 			{
 				$qty= $_POST['qty'];
+				$_SESSION["qty"]=$qty;
 			}
-			session_start();
-			$_SESSION["newsession"]=$qty;
-		
+			
 			if(isset($_POST['submit']))
 			{
 				$Email= $_POST["Email"];
@@ -117,28 +122,29 @@
 			$res= mysqli_query($con,$query);	
 			$row = $res->fetch_assoc(); 
 			//print_r($row);echo $row['Type'];
-			$user_id= $row['Id'];
+			$_SESSION["user"]= $row['Id'];
 		
 			if(empty($row))
 				{
 					//echo "<script type='text/javascript'>alert('Invalid Credentials.');</script>";
 				echo "<script>
 				document.getElementById('InvalidError').innerHTML='*Invalid Credentials';
-                      </script>";
+				      </script>";
 				}
 			else{
+				
 					if($redirect==1)
 					{
 						
-						header('Location: '. "Bookedorder.php?Product_id=$ID&Quantity=1&Id=$user_id");
+						header('Location: '. "Bookedorder.php?Product_id=$ID&Quantity=$_SESSION[qty]");
 					}
 					else if($row['Type']==1)
 					{
-						header('Location: '."../Buyer_home.php?Id=$row[Id]");
+						header('Location: '."../Buyer_home.php");
 					}
 					else
 					{				
-						header('Location: '."../Seller_home.php?Id=$row[Id]");
+						header('Location: '."../Seller_home.php");
 					}
 				}
 				}
