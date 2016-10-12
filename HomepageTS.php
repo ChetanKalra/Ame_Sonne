@@ -3,7 +3,7 @@
 <html>
 	<?php
 		session_start();
-		print_r($_SESSION["TS"]);
+	//	print_r($_SESSION["TS"]);//exit;
 	?>
     <head>
         <title>AME SONNE</title>
@@ -145,21 +145,20 @@
 		<?php
 		
 		
-			$ID1= print_r($_SESSION['TS'][1][0]);
+			$ID1= $_SESSION['TS'][1][0];
 			
-			//$ID2= print_r($_SESSION['TS'][2]['order_id']);
-			//$ID3= print_r($_SESSION['TS'][3]['order_id']);
-			//$ID4= print_r($_SESSION['TS'][4]['order_id']);
-			//$ID5= print_r($_SESSION['TS'][5]['order_id']);
-			//$ID6= print_r($_SESSION['TS'][6]['order_id']);
-			echo $ID1;
-			//$ID2,$ID3,$ID4,$ID5,$ID6;
-			exit;
+			$ID2= $_SESSION['TS'][2]['order_id'];
+			$ID3= $_SESSION['TS'][3]['order_id'];
+			$ID4= $_SESSION['TS'][4]['order_id'];
+			$ID5= $_SESSION['TS'][5]['order_id'];
+			$ID6= $_SESSION['TS'][6]['order_id'];
+			//exit;
 			$con= mysqli_connect("localhost","root","","Art_Gallery");
 			
-			$query="select * from products where product_id IN(".print_r($_SESSION['TS'][1]['order_id']).",".print_r($_SESSION['TS'][2]['order_id']).",".$_SESSION['TS'][3]['order_id'].",".$_SESSION['TS'][4]['order_id'].",".$_SESSION['TS'][5]['order_id'].",".$_SESSION['TS'][6]['order_id'].")";
-			echo $query;
+			//$query="select * from products where product_id IN(".print_r($_SESSION['TS'][1]['order_id']).",".print_r($_SESSION['TS'][2]['order_id']).",".$_SESSION['TS'][3]['order_id'].",".$_SESSION['TS'][4]['order_id'].",".$_SESSION['TS'][5]['order_id'].",".$_SESSION['TS'][6]['order_id'].")";
+			//echo $query;
 			//$query= "select * from products where product_id IN(".print_r($_SESSION['TS'][1][0]).")";
+			$query="select * from products where product_id IN($ID1,$ID2,$ID3,$ID4,$ID5,$ID6)";	
 			$res= mysqli_query($con,$query);	
 		
 			$results= array();
@@ -170,7 +169,7 @@
 				$i++;
 			}
 			//print_r($results);exit;
-			exit;
+			//exit;
 		?>
 		
 		

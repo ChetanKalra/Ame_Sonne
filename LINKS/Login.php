@@ -123,6 +123,7 @@
 			$row = $res->fetch_assoc(); 
 			//print_r($row);echo $row['Type'];
 			$_SESSION["user"]= $row['Id'];
+			$_SESSION["Type"]= $row['Type'];
 		
 			if(empty($row))
 				{

@@ -54,6 +54,7 @@
             
             #rl{
                 text-align: right;
+				position: relative;
             }
             
             #ll{
@@ -72,6 +73,23 @@
 				display:none;
 			}
         </style>
+		
+		<script>
+		
+			function Confirmation()
+			{
+				var chk= confirm("Are you sure you want to switch?");
+				if(chk==true)
+					{
+						return true;
+					}
+				else
+					{
+						return false;
+					}
+			}
+		
+		</script>
 		
 		<?php
 		
@@ -92,6 +110,13 @@
 		
 		<?php 
 			session_start();
+		
+			$con= mysqli_connect("localhost","root","","Art_Gallery");
+			$query="select Type from users where Id=$_SESSION[user]";
+			$res= mysqli_query($con,$query);	
+			$row = $res->fetch_assoc(); 
+			//print_r($row);echo $row['Type'];
+			$_SESSION["Type"]= $row['Type'];
 		?>
 		
 		
@@ -117,9 +142,40 @@
 				</div>
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
-                <li id="rl" style="float:right;"><a href="Homepage.php">Logout</a></li>
+				
+				<?php
+				
+					if($_SESSION["Type"]==1)
+					{
+						echo "<div class='dropdown' style='float:right'>
+					<span style='color:#9d9880'>Profile</span>
+					<div class='dropdown-content'>
+					
+						<a href='LINKS/Switch.php' onclick='return Confirmation()' style='color:black;'>Switch</a><br><hr>
+						<a href='first.php' style='color:black;'>Logout</a><br>
+						
+					</div>
                 
+                </div>";
+					}
+					else
+					{
+						echo "<div class='dropdown' style='float:right'>
+					<span style='color:#9d9880'>Profile</span>
+					<div class='dropdown-content'>
+					
+						<a href='Seller_home.php' style='color:black;'>Upload</a><br><hr>
+						<a href='first.php' style='color:black;'>Logout</a><br>
+						
+					</div>
                 
+                </div>";	
+					}
+				
+				?>
+				
+				
+				
                 <div class="logo">
                 <a href="#"><img src="Images/Logo1.jpg" height="20px" width="30px"></a>
                 </div>

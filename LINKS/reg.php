@@ -20,7 +20,7 @@ else{
 	echo "<script type='text/javascript'>alert('Email ID already in use.');</script>";
 	
 	echo "<a href='Signup.html'><h3>Return</h3></a>";
-	//header('Location: '."#");
+	//header('Location: '."Signup.html");
 	
 }
 

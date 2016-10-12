@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 
 <html>
-	<?php
-	?>
+	
     <head>
         <title>AME SONNE</title>
         
