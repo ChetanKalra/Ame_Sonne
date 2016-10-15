@@ -196,7 +196,7 @@
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
                 <li id="rl" style="float:right;"><a href="LINKS/Login.php?redirect=0">Login</a></li>
-                <li id="rl" style="float:right;"><a href="Links/Signup.HTML">Sign Up</a></li>
+                <li id="rl" style="float:right;"><a href="Links/Signup.php">Sign Up</a></li>
                 
                 <div class="logo">
                 <a href="#"><img src="Images/logo1.jpg" height="20px" width="30px"></a>
@@ -228,7 +228,18 @@
                 <div class="col1 imgWrap">
                     <div class="row1">
                     <a href="LINKS/ArtDetail.php?Product_id=<?php print_r($results[1]['Product_id']) ?>&Category_id=<?php print_r($results[1]['Category']) ?>"><img src='<?php print_r($results[1]['img_path']) ?>' style="margin:9%;" width="350" height="400" class="sampleimg" id="TSimg"></a>
-					<p class="imgDescription1">Abstract</p>	
+					<p class="imgDescription1"><?php if($results[1]['Category']==1)
+								echo "Abstract";
+							else if($results[1]['Category']==2)
+								echo "Black &amp; White";
+							else if($results[1]['Category']==3)
+								echo "Nature";
+							else if($results[1]['Category']==4)
+								echo "Photography";
+							else
+								echo "Sketch";
+										
+							?></p>	
                     <p class="imgDescription2"><?php echo "$";print_r($results[1]['Price']) ?></p>
 					</div>
 					
@@ -236,13 +247,35 @@
                 
                 <div class="col1 imgWrap">
                     <a href="LINKS/ArtDetail.php?Product_id=<?php print_r($results[2]['Product_id']) ?>&Category_id=<?php print_r($results[2]['Category']) ?>"><img src='<?php print_r($results[2]['img_path']) ?>' style="margin:9%;" width="350" height="400" class="sampleimg" ></a>
-					<p class="imgDescription1">Photography</p>	
+					<p class="imgDescription1"><?php if($results[2]['Category']==1)
+								echo "Abstract";
+							else if($results[2]['Category']==2)
+								echo "Black &amp; White";
+							else if($results[2]['Category']==3)
+								echo "Nature";
+							else if($results[2]['Category']==4)
+								echo "Photography";
+							else
+								echo "Sketch";
+										
+							?></p>	
 					<p class="imgDescription2"><?php echo "$";print_r($results[2]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
                     <a href="LINKS/ArtDetail.php?Product_id=<?php print_r($results[3]['Product_id']) ?>&Category_id=<?php print_r($results[3]['Category']) ?>"><img src="<?php print_r($results[3]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg" ></a>
-					<p class="imgDescription1">Nature</p>	
+					<p class="imgDescription1"><?php if($results[3]['Category']==1)
+								echo "Abstract";
+							else if($results[3]['Category']==2)
+								echo "Black &amp; White";
+							else if($results[3]['Category']==3)
+								echo "Nature";
+							else if($results[3]['Category']==4)
+								echo "Photography";
+							else
+								echo "Sketch";
+										
+							?></p>	
 					<p class="imgDescription2"><?php echo "$";print_r($results[3]['Price']) ?></p>
                 </div>
             </div> 
@@ -257,19 +290,52 @@
             <div class="row1">
                 <div class="col1 imgWrap">
                     <a href="LINKS/ArtDetail.php?Product_id=<?php print_r($results[4]['Product_id']) ?>&Category_id=<?php print_r($results[4]['Category']) ?>"><img src="<?php print_r($results[4]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg" ></a>
-					<p class="imgDescription1">Abstract</p>	
+					<p class="imgDescription1"><?php if($results[4]['Category']==1)
+								echo "Abstract";
+							else if($results[4]['Category']==2)
+								echo "Black &amp; White";
+							else if($results[4]['Category']==3)
+								echo "Nature";
+							else if($results[4]['Category']==4)
+								echo "Photography";
+							else
+								echo "Sketch";
+										
+							?></p>	
 					<p class="imgDescription2"><?php echo "$";print_r($results[4]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
                     <a href="LINKS/ArtDetail.php?Product_id=<?php print_r($results[5]['Product_id']) ?>&Category_id=<?php print_r($results[5]['Category']) ?>"><img src="<?php print_r($results[5]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg" ></a>
-					<p class="imgDescription1">Sketch</p>	
+					<p class="imgDescription1"><?php if($results[5]['Category']==1)
+								echo "Abstract";
+							else if($results[5]['Category']==2)
+								echo "Black &amp; White";
+							else if($results[5]['Category']==3)
+								echo "Nature";
+							else if($results[5]['Category']==4)
+								echo "Photography";
+							else
+								echo "Sketch";
+										
+							?></p>	
 					<p class="imgDescription2"><?php echo "$";print_r($results[5]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
                     <a href="LINKS/ArtDetail.php?Product_id=<?php print_r($results[6]['Product_id']) ?>&Category_id=<?php print_r($results[6]['Category']) ?>"><img src="<?php print_r($results[6]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg" ></a>
-					<p class="imgDescription1">Nature</p>	
+					<p class="imgDescription1"><?php if($results[6]['Category']==1)
+								echo "Abstract";
+							else if($results[6]['Category']==2)
+								echo "Black &amp; White";
+							else if($results[6]['Category']==3)
+								echo "Nature";
+							else if($results[6]['Category']==4)
+								echo "Photography";
+							else
+								echo "Sketch";
+										
+							?></p>	
 					<p class="imgDescription2"><?php echo "$";print_r($results[6]['Price']) ?></p>
                 </div>
 				 

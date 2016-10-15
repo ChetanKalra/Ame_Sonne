@@ -38,15 +38,15 @@
 				<ul>
 
 
-					 <li id="ll"><a href="../Homepage.php">Top Charts</a></li>
-                <li id="ll"><a href="#">Categories</a></li>
+					 <li id="ll"><a href="../first.php">Top Charts</a></li>
+                <!--<li id="ll"><a href="#">Categories</a></li>-->
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
                 <li id="rl" style="float:right;"><a href="../LINKS/Login.php?redirect=0">Login</a></li>
-                <li id="rl" style="float:right;"><a href="../Links/Signup.HTML">Sign Up</a></li>
+                <li id="rl" style="float:right;"><a href="../Links/Signup.php">Sign Up</a></li>
                 
                 <div class="logo">
-                <a href="../Homepage.php"><img src="../Images/logo1.jpg" height="20px" width="30px"></a>
+                <a href="../first.php"><img src="../Images/logo1.jpg" height="20px" width="30px"></a>
                 </div>
 				</ul>
 
@@ -112,16 +112,16 @@
                 
                 <div class="row1">
                     <div class="col1 cat1">
-                        <a href="Category.php?Cat=3">Nature</a><br>
-                <a href="Category.php?Cat=4">Photography</a><br>
-                <a href="Category.php?Cat=1">Abstract Style</a><br>
+                        <a href="CategoryPostLogin.php?Cat=3">Nature</a><br>
+                <a href="CategoryPostLogin.php?Cat=4">Photography</a><br>
+                <a href="CategoryPostLogin.php?Cat=1">Abstract Style</a><br>
           
                     </div>
                     
                     <div class="col1 cat2">
                      
-                    <a href="Category.php?Cat=2">Black & White</a><br>
-                    <a href="Category.php?Cat=5">Sketches</a>
+                    <a href="CategoryPostLogin.php?Cat=2">Black & White</a><br>
+                    <a href="CategoryPostLogin.php?Cat=5">Sketches</a>
                     </div>
                 </div>
                 

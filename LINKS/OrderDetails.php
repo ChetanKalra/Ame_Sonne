@@ -133,8 +133,13 @@
 							}
 							
 							
-							
-					echo "</div>
+							if($results[$max]['Status']=='Pending')
+							{
+								echo "<a href='Cancelorder.php?Order_No=".$results[$max]['Order_No']."'><button style='float:right;' class='button' onclick='return check()'>Cancel Order</button></a>";			
+							}
+					
+					
+				echo	"</div>
 					</div>
 				</div>
 					";
@@ -217,7 +222,23 @@
             
             
         </div>
+		<script>
 		
+			function check()
+			{
+				var yesno= confirm("Are you sure you want to cancel this order?");
+				
+				if(yesno==true)
+					{
+						return true;
+					}
+				else
+				{
+					return false;
+				}
+			}
+		
+		</script>
 	</body>
 
 </html>

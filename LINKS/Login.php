@@ -62,7 +62,7 @@
 			
         <div id="container">
 			<div class="Homebutton">
-              <a href="../Homepage.php"><button class="homebtn">HOME</button></a>
+              <a href="../first.php"><button class="homebtn">HOME</button></a>
           	</div>
 			
            <center>
@@ -145,7 +145,7 @@
 					}
 					else
 					{				
-						header('Location: '."../Seller_home.php");
+						header('Location: '."../Buyer_home.php");
 					}
 				}
 				}

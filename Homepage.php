@@ -126,7 +126,7 @@
         </style>
 		
 		<?php
-		$con= mysqli_connect("localhost","root","","Art_Gallery");
+			$con= mysqli_connect("localhost","root","","Art_Gallery");
 			$query="select * from products order by Product_id desc limit 3";
 			$res= mysqli_query($con,$query);	
 		
@@ -180,7 +180,7 @@
         
                 <li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
                 <li id="rl" style="float:right;"><a href="LINKS/Login.php?redirect=0">Login</a></li>
-                <li id="rl" style="float:right;"><a href="Links/Signup.HTML">Sign Up</a></li>
+                <li id="rl" style="float:right;"><a href="Links/Signup.php">Sign Up</a></li>
                 
                 <div class="logo">
                 <a href="#"><img src="Images/logo1.jpg" height="20px" width="30px"></a>
@@ -211,7 +211,8 @@
 			   <div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                    <a href="LINKS/ArtDetail.php?Product_id=5&Category_id=1"><img src='<?php print_r($results[5]['img_path']); ?>' style="margin:9%;" width="350" height="400" class="sampleimg" id="TSimg"></a>
+                    <a href="LINKS/ArtDetail.php?Product_id=5&Category_id=1"><img src='<?php 
+						print_r($results[5]['img_path']); ?>' style="margin:9%;" width="350" height="400" class="sampleimg" id="TSimg"></a>
 					<p class="imgDescription1">Abstract</p>	
                     <p class="imgDescription2"><?php echo "$";print_r($results[5]['Price']) ?></p>
 					</div>

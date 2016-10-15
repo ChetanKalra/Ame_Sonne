@@ -39,7 +39,7 @@
 
 
 					<li id="ll"><a href="OrderDetails.php">Your Orders</a></li>
-					<li id="ll"><a href="#">Categories</a></li>
+					<!--<li id="ll"><a href="#">Categories</a></li>-->
 
 					<li id="rl" style="float:right;"><a href="#Contactdiv">Contact</a></li>
 					<li id="rl" style="float:right;"><a href="../Homepage.php">Logout</a></li>
