@@ -247,7 +247,7 @@
 		
 		
 		
-		<div class="footer" id="Contact">
+		<div class="footer" id="Contactdiv">
 		
 			
            <div class="footerrow"> 
@@ -263,17 +263,17 @@
                 
                 <div class="row1">
                     <div class="col1 cat1">
-                <a href="#">Nature</a><br>
-                <a href="#">Design</a><br>
-                <a href="#">Abstract Style</a><br>
+                <a href="Category.php?Cat=3">Nature</a><br>
+                <a href="Category.php?Cat=2">Black &amp; white</a><br>
+                <a href="Category.php?Cat=1">Abstract Style</a><br>
                 
                     </div>
                     
                     <div class="col1 cat2">
                       
                     
-                    <a href="#">Photography</a><br>
-                    <a href="#">Sketches</a>
+                    <a href="Category.php?Cat=4">Photography</a><br>
+                    <a href="Category.php?Cat=5">Sketches</a>
                     </div>
                 </div>
                 

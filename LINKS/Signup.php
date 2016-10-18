@@ -15,11 +15,15 @@ if(mysqli_query($con,$query))
     header('Location: '."Login.php?redirect=0");
 }
 else{
-    
     //echo "Email Id already in use.";
 	//header('Location: '."Signup.html");
-	echo "<script type='text/javascript'>alert('Email ID already in use.');</script>";
-}
+	//echo "<script type='text/javascript'>document.getElementById('EmailError').innerHTML='<h3>*Email ID already in use</h3>';</script>";
+	ob_start();
+	//header('Location: '."Redirect.php");
+	 echo "<script>alert('Email Id Already in use');</script>";
+	 echo("<script>window.location = 'Signup.php';</script>");
+	ob_end_flush();
+	}
 }
 ?>
 
@@ -39,7 +43,7 @@ else{
                 
             }
             
-            #NameError,#EmailError,#AgeError, #PasswordError, #ConfirmError{
+            #NameError,#EmailError,#AgeError, #PasswordError, #ConfirmError,#DateError{
                 
                 color:red;
             }
@@ -106,9 +110,19 @@ else{
                     </div>
                 </div>
                     
+                
                 <div class="row">    
+                <div class="col"><input type="text" name="datevalid" id="datevalid1" class="box" placeholder="DOB" autocomplete="off" onblur="DateValidation()"/></div>
+                
+                    <div class="col"><div id="DateError">
+                
+                    </div>  
+                    </div>
+                </div>
+				 
+				 <div class="row">    
                     <div class="col">    
-                    <input type="text" name="age" placeholder="Age" class="box" id="numb" autocomplete="off" onblur="AgeValidation()"/>
+                    <input type="text" name="age" placeholder="Age" class="box" id="numb" autocomplete="off" onblur="AgeValidation()" readOnly="true"/>
                         </div>
                     <div class="col">
                         <div id="AgeError">
@@ -116,14 +130,6 @@ else{
                     </div>
                 </div>
                 
-                <div class="row">    
-                <div class="col"><input type="date" name="datevalid" id="datevalid1" class="box" placeholder="dd/mm/yyyy" autocomplete="off" onblur="DateValidation()"/></div>
-                
-                    <div class="col"><div id="DateError">
-                
-                    </div>  
-                    </div>
-                </div>
                 
                 <div class="row"> 
                     <div class="col">
@@ -239,7 +245,101 @@ else{
                 }
             }
             
-            function AgeValidation(){  
+                
+            function DateValidation(){  
+                   //DATE VALIDATION
+                var d= document.getElementById("datevalid1").value;
+				
+				if(d=="")
+					{
+						document.getElementById('DateError').innerHTML="*Date cannot be left blank";
+						return false;
+					}
+               
+				var dob=[];
+				var age;
+				var today= new Date();
+				
+				dob= d.split('/');
+				
+				var yyyy= dob[0];
+				var mm= dob[1];
+				var dd= dob[2];
+				
+				if(yyyy.length!=4||mm.length!=2||dd.length!=2)
+					{
+						document.getElementById('DateError').innerHTML="Format: yyyy/mm/dd";
+						return false;
+					}
+				if(mm>12||mm<1||dd<1||dd>31)
+					{
+						document.getElementById('DateError').innerHTML="Enter a valid Date";
+						return false;
+					}
+				
+				var CurrentYear= today.getFullYear();
+				var CurrentMonth= today.getMonth()+1;
+				var CurrentDay= today.getDate();
+				console.log(CurrentMonth);
+				
+				if(mm<CurrentMonth)
+					{
+						age = CurrentYear-yyyy;
+					}
+				else if(mm>CurrentMonth)
+					{
+						age = CurrentYear-yyyy-1;	
+					}
+				else
+					{
+						if(dd<CurrentDay)
+							{
+								age= CurrentYear-yyyy;
+							}
+						else if(dd>CurrentDay)
+							{
+								age = CurrentYear-yyyy-1;
+							}
+						else
+							{
+								age= CurrentYear-yyyy;
+							}
+					}
+	
+                var myDate = new Date(d);
+                //var k= myDate.toLocaleDateString(myDate);
+                
+				var priorDate = new Date().setDate(today.getDate()-4748);
+                //alert(priorDate);
+                
+                var z= today.getTime();
+                //alert(z);
+                
+                var ET= myDate.getTime();
+                //alert(ET);
+                
+                var n = today.toLocaleDateString();
+                
+                //var t= new Date(priorDate);
+                //var p = t.toLocaleDateString(t);
+                
+                if(ET>z)
+                    {
+                        document.getElementById("DateError").innerHTML="*You Cannot enter a date in the future!";
+                        return false;
+                    }
+                else if(ET>priorDate)
+                    {
+                        document.getElementById("DateError").innerHTML="*You must be atleast 13 years";
+                        return false;
+                    }  
+                else{
+                    document.getElementById("DateError").innerHTML="<h3 id='tick'>&#10003;</h3>";
+					document.getElementById('numb').value=age;
+            }
+			}
+			
+			/*function AgeValidation(){  
                 //AGE VALIDATION
                 var y = document.getElementById("numb").value;
                 if(y=="")
@@ -262,52 +362,10 @@ else{
                 else{
                     document.getElementById("AgeError").innerHTML="<h3 id='tick'>&#10003;</h3>";
                 }
-            }
-                
-            function DateValidation(){  
-                //DATE VALIDATION
-                var d= document.getElementById("datevalid1").value;
-                
-                var myDate = new Date(d);
-               
-                //var k= myDate.toLocaleDateString(myDate);
-                
-                var today= new Date();
-                
-                var priorDate = new Date().setDate(today.getDate()-4748);
-                //alert(priorDate);
-                
-                var z= today.getTime();
-                //alert(z);
-                
-                var ET= myDate.getTime();
-                //alert(ET);
-                
-                var n = today.toLocaleDateString();
-                
-                //var t= new Date(priorDate);
-                //var p = t.toLocaleDateString(t);
-                
-                if(ET==""){
-                    document.getElementById("DateError").innerHTML="*Date cannot be left blank";
-                        return false;
-                }
-                
-                if(ET>z)
-                    {
-                        document.getElementById("DateError").innerHTML="*You Cannot enter a date in the future!";
-                        return false;
-                    }
-                else if(ET>priorDate)
-                    {
-                        document.getElementById("DateError").innerHTML="*You must be atleast 13 years";
-                        return false;
-                    }  
-                else{
-                    document.getElementById("DateError").innerHTML="<h3 id='tick'>&#10003;</h3>";
-                }
-            }
-            
+            } */
+			
+			
+			
             function PasswordValidation(){  
                 
                 //PASSWORD VALIDATION
@@ -425,7 +483,7 @@ else{
             
            
                 //AGE VALIDATION
-                var y = document.getElementById("numb").value;
+                /*var y = document.getElementById("numb").value;
                 if(y=="")
                     {
                         document.getElementById("AgeError").innerHTML="*Age must be filled out";
@@ -445,12 +503,19 @@ else{
                     } 
                 else{
                     document.getElementById("AgeError").innerHTML="<h3 id='tick'>&#10003;</h3>";
-                }
+                }*/
             
                 
             
                 //DATE VALIDATION
-                var d= document.getElementById("datevalid1").value;
+                /*var d= document.getElementById("datevalid1").value;
+				
+				if(d=="")
+					{
+						document.getElementById('DateError').innerHTML="Date cannot be left blank";
+						return false;
+					}
+                
                 
                 var myDate = new Date(d);
                
@@ -469,13 +534,94 @@ else{
                 
                 var n = today.toLocaleDateString();
                 
+                if(ET>z)
+                    {
+                        document.getElementById("DateError").innerHTML="*You Cannot enter a date in the future!";
+                        return false;
+                    }
+                else if(ET>priorDate)
+                    {
+                        document.getElementById("DateError").innerHTML="*You must be atleast 13 years";
+                        return false;
+                    }  
+                else{
+                    document.getElementById("DateError").innerHTML="<h3 id='tick'>&#10003;</h3>";
+                }*/
+				
+				
+				    //DATE VALIDATION
+                var d= document.getElementById("datevalid1").value;
+				
+				if(d=="")
+					{
+						document.getElementById('DateError').innerHTML="*Date cannot be left blank";
+						return false;
+					}
+               
+				var dob=[];
+				var age;
+				var today= new Date();
+				
+				dob= d.split('/');
+				
+				var yyyy= dob[0];
+				var mm= dob[1];
+				var dd= dob[2];
+				
+				if(yyyy.length!=4||mm.length!=2||dd.length!=2)
+					{
+						document.getElementById('DateError').innerHTML="Format: yyyy/mm/dd";
+						return false;
+					}
+				if(mm>12||mm<1||dd<1||dd>31)
+					{
+						document.getElementById('DateError').innerHTML="Enter a valid Date";
+						return false;
+					}
+				var CurrentYear= today.getFullYear();
+				var CurrentMonth= today.getMonth()+1;
+				var CurrentDay= today.getDate();
+				console.log(CurrentMonth);
+				if(mm<CurrentMonth)
+					{
+						age = CurrentYear-yyyy;
+					}
+				else if(mm>CurrentMonth)
+					{
+						age = CurrentYear-yyyy-1;	
+					}
+				else
+					{
+						if(dd<CurrentDay)
+							{
+								age= CurrentYear-yyyy;
+							}
+						else if(dd>CurrentDay)
+							{
+								age = CurrentYear-yyyy-1;
+							}
+						else
+							{
+								age= CurrentYear-yyyy;
+							}
+					}
+				console.log(age);
+                var myDate = new Date(d);
+                //var k= myDate.toLocaleDateString(myDate);
+                
+				var priorDate = new Date().setDate(today.getDate()-4748);
+                //alert(priorDate);
+                
+                var z= today.getTime();
+                //alert(z);
+                
+                var ET= myDate.getTime();
+                //alert(ET);
+                
+                var n = today.toLocaleDateString();
+                
                 //var t= new Date(priorDate);
                 //var p = t.toLocaleDateString(t);
-                
-                if(ET==""){
-                    document.getElementById("DateError").innerHTML="*Date cannot be left blank";
-                        return false;
-                }
                 
                 if(ET>z)
                     {
@@ -489,7 +635,8 @@ else{
                     }  
                 else{
                     document.getElementById("DateError").innerHTML="<h3 id='tick'>&#10003;</h3>";
-                }
+					document.getElementById('numb').value=age;
+            }
         
             
              

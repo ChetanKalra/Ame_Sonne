@@ -8,13 +8,12 @@
         <style>
         
             .btn{
-                
                 width:120px;
                 padding-bottom: 28px
                 
             }
             
-            #NameError,#EmailError,#AgeError, #PasswordError, #ConfirmError{
+            #NameError,#EmailError,#AgeError, #PasswordError, #ConfirmError, #DateError{
                 
                 color:red;
             }
@@ -83,7 +82,7 @@
                     
                 <div class="row">    
                     <div class="col">    
-                    <input type="text" name="age" placeholder="Age" class="box" id="numb" autocomplete="off" onblur="AgeValidation()"/>
+                    <input type="text" name="age" placeholder="Age" class="box" id="numb" autocomplete="off" onblur="AgeValidation()" disabled/>
                         </div>
                     <div class="col">
                         <div id="AgeError">
@@ -92,7 +91,7 @@
                 </div>
                 
                 <div class="row">    
-                <div class="col"><input type="date" name="datevalid" id="datevalid1" class="box" placeholder="dd/mm/yyyy" autocomplete="off" onblur="DateValidation()"/></div>
+                <div class="col"><input type="date" name="datevalid" id="datevalid1" class="box" placeholder="yyyy/mm/dd" autocomplete="off" onblur="DateValidation()"/></div>
                 
                     <div class="col"><div id="DateError">
                 
@@ -162,7 +161,7 @@
         
             //function validateForm()
                 
-            function NameValidation(){    
+           /* function NameValidation(){    
                //NAME VALIDATION
                 var x= document.signup.username.value;
                 //var ck_password =  /^[0-9]/;
@@ -186,9 +185,9 @@
                 else{
                     document.getElementById("NameError").innerHTML="<h3 id='tick'>&#10003;</h3>"
                 }
-            }
+            } */
                 
-            function EmailValidation(){  
+           /* function EmailValidation(){  
                 //EMAIL VALIDATION
                 var emailID = document.signup.Email.value;
                 var letters= /^[a-zA-Z0-9_ ]*$/;
@@ -212,7 +211,7 @@
                 else{
                     document.getElementById("EmailError").innerHTML="<h3 id='tick'>&#10003;</h3>";
                 }
-            }
+            } */
             
             function AgeValidation(){  
                 //AGE VALIDATION
@@ -242,13 +241,61 @@
             function DateValidation(){  
                 //DATE VALIDATION
                 var d= document.getElementById("datevalid1").value;
-                
-                var myDate = new Date(d);
+				
+				if(d=="")
+					{
+						document.getElementById('DateError').innerHTML="Date cannot be left blank";
+						return false;
+					}
                
+				var dob=[];
+				var age;
+				var today= new Date();
+				
+				dob= d.split('/');
+				
+				var yyyy= dob[0];
+				var mm= dob[1];
+				var dd= dob[2];
+				
+				var CurrentYear= today.getFullYear();
+				var CurrentMonth= today.getMonth()+1;
+				var CurrentDay= today.getDate();
+				console.log(CurrentMonth);
+				if(mm<CurrentMonth)
+					{
+						age = CurrentYear-yyyy;
+					}
+				else if(mm>CurrentMonth)
+					{
+						age = CurrentYear-yyyy-1;	
+					}
+				else
+					{
+						if(dd<CurrentDay)
+							{
+								age= CurrentYear-yyyy;
+							}
+						else if(dd>CurrentDay)
+							{
+								age = CurrentYear-yyyy-1;
+							}
+						else
+							{
+								age= CurrentYear-yyyy;
+							}
+					}
+				console.log(age);
+                var myDate = new Date(d);
                 //var k= myDate.toLocaleDateString(myDate);
                 
-                var today= new Date();
+              
+				
                 
+				
+				document.getElementById('numb').value=age;
+			
+				
                 var priorDate = new Date().setDate(today.getDate()-4748);
                 //alert(priorDate);
                 
@@ -262,11 +309,6 @@
                 
                 //var t= new Date(priorDate);
                 //var p = t.toLocaleDateString(t);
-                
-                if(ET==""){
-                    document.getElementById("DateError").innerHTML="*Date cannot be left blank";
-                        return false;
-                }
                 
                 if(ET>z)
                     {
@@ -283,7 +325,7 @@
                 }
             }
             
-            function PasswordValidation(){  
+            /*function PasswordValidation(){  
                 
                 //PASSWORD VALIDATION
                 var x= document.getElementById("pass").value;
@@ -341,7 +383,7 @@
 				else{
 					document.getElementById("ConfirmError").innerHTML="<h3 id='tick'>&#10003;</h3>";	
 				}
-            }
+            } */
             
             function validateForm(){
                 
@@ -427,32 +469,26 @@
                 //DATE VALIDATION
                 var d= document.getElementById("datevalid1").value;
                 
-                var myDate = new Date(d);
-               
-                //var k= myDate.toLocaleDateString(myDate);
+				if(d=="")
+					{
+						document.getElementById('DateError').innerHTML="Date cannot be left blank";
+						return false;
+					}
                 
+				
+                var myDate = new Date(d);
+                 
                 var today= new Date();
                 
                 var priorDate = new Date().setDate(today.getDate()-4748);
-                //alert(priorDate);
                 
                 var z= today.getTime();
-                //alert(z);
                 
                 var ET= myDate.getTime();
-                //alert(ET);
                 
                 var n = today.toLocaleDateString();
-                
-                //var t= new Date(priorDate);
-                //var p = t.toLocaleDateString(t);
-                
-                if(ET==""){
-                    document.getElementById("DateError").innerHTML="*Date cannot be left blank";
-                        return false;
-                }
-                
-                if(ET>z)
+              
+				if(ET>z)
                     {
                         document.getElementById("DateError").innerHTML="*You Cannot enter a date in the future!";
                         return false;

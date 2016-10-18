@@ -5,10 +5,10 @@
 		<title>Art Detail</title>
 		<link href="../CSS/ArtDetail.css" type="text/css" rel="stylesheet">
 		<?php
-		
-			session_start();
-		
-		?>
+		session_start();
+	
+	
+	?>
 		<style>
 		
 			.img{

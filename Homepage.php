@@ -1,6 +1,14 @@
 <!DOCTYPE HTML>
 
 <html>
+	<?php
+		session_start();
+	
+		//echo $_SESSION["user_id"];
+		//session_destroy();
+	//exit;
+	
+	?>
 	
     <head>
         <title>AME SONNE</title>

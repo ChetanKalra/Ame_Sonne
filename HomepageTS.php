@@ -3,8 +3,13 @@
 <html>
 	<?php
 		session_start();
-	//	print_r($_SESSION["TS"]);//exit;
+	
+		//echo $_SESSION["user_id"];
+		//session_destroy();
+		//exit;
+	
 	?>
+	
     <head>
         <title>AME SONNE</title>
         
