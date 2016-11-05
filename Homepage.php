@@ -366,19 +366,19 @@
                 </div>
                 <div class="col2 imgWrap">
                     <div class="row1">
-                        <center><img src="Images/ArtistVN.jpg" class="circle"></center>
+                        <center><img src="Images/at2.jpg" class="circle"></center>
 								<p class="says" style="text-align:center; font-weight:100;">...Have Patience<br>and paint</p>
                         </div>
                     <div class="row1">
                         <br>
                         <p>Art is not what you see, but what you make other see.</p>
-                        <p style="color:#777;">-Vijeta Nayak</p>
+                        <p style="color:#777;">-Edgar Degas</p>
                     </div>
                 </div>
                 <div class="col2 imgWrap">
                     <div class="row1">
                         <center><img src="Images/at3.jpg" class="circle"></center>
-								<p class="says" style="text-align:center; font-weight:100;">Moto<br>Live and let die</p>
+								<p class="says" style="text-align:center; font-weight:100;">Moto<br>Live and let live</p>
                         </div>
                     <div class="row1">
                         <br>

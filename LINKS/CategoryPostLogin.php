@@ -120,7 +120,7 @@
                     
                     <div class="col1 cat2">
                      
-                    <a href="CategoryPostLogin.php?Cat=2">Black & White</a><br>
+                    <a href="CategoryPostLogin.php?Cat=2">Black &amp; White</a><br>
                     <a href="CategoryPostLogin.php?Cat=5">Sketches</a>
                     </div>
                 </div>
