@@ -117,7 +117,7 @@
                 
             }
 			
-			#img1, #img2,#img3,#img4,#img5,#img6{
+			#img1,#img2,#img3,#img4,#img5,#img6{
 				font-size: 30px;
 				z-index: 5;
 				padding-left: 40px;

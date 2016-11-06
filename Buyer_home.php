@@ -201,18 +201,18 @@
             <div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=1&Category_id=1&Id=<?php echo $user_id ?>"><img src='<?php print_r($results[1]['img_path']);?>' style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=1&Category_id=1"><img src='<?php print_r($results[1]['img_path']);?>' style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[1]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=2&Category_id=1&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[2]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=2&Category_id=1"><img src="<?php print_r($results[2]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[2]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=3&Category_id=1&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[3]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=3&Category_id=1"><img src="<?php print_r($results[3]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[3]['Price']) ?></p>
                 </div>
             </div> 
@@ -226,17 +226,17 @@
             
             <div class="row1">
                 <div class="col1 imgWrap">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=4&Category_id=1&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[4]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=4&Category_id=1"><img src="<?php print_r($results[4]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[4]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=5&Category_id=1&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[5]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=5&Category_id=1"><img src="<?php print_r($results[5]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[5]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=6&Category_id=1&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[6]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=6&Category_id=1"><img src="<?php print_r($results[6]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[6]['Price']) ?></p>
                 </div>
             </div> 
@@ -254,18 +254,18 @@
             <div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=23&Category_id=4&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[23]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=23&Category_id=4"><img src="<?php print_r($results[23]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[23]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=24&Category_id=4&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[24]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=24&Category_id=4"><img src="<?php print_r($results[24]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[24]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=25&Category_id=4&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[25]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=25&Category_id=4"><img src="<?php print_r($results[25]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[25]['Price']) ?></p>
                 </div>
             </div> 
@@ -281,18 +281,18 @@
             <div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=26&Category_id=4&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[26]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=26&Category_id=4"><img src="<?php print_r($results[26]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[26]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=27&Category_id=4&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[27]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=27&Category_id=4"><img src="<?php print_r($results[27]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[27]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=28&Category_id=4&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[28]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=28&Category_id=4"><img src="<?php print_r($results[28]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[28]['Price']) ?></p>
                 </div>
             </div> 
@@ -317,7 +317,7 @@
 			 <div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=33&Category_id=5&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[33]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=33&Category_id=5"><img src="<?php print_r($results[33]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 						
 						<p class="imgDescription2">
 							<?php 
@@ -337,12 +337,12 @@
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=34&Category_id=5&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[34]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=34&Category_id=5"><img src="<?php print_r($results[34]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[34]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=35&Category_id=5&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[35]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=35&Category_id=5"><img src="<?php print_r($results[35]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[35]['Price']) ?></p>
                 </div>
             </div> 
@@ -350,18 +350,18 @@
 			<div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=36&Category_id=5&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[36]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=36&Category_id=5"><img src="<?php print_r($results[36]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[36]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=37&Category_id=5&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[37]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=37&Category_id=5"><img src="<?php print_r($results[37]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[37]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=38&Category_id=5&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[38]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=38&Category_id=5"><img src="<?php print_r($results[38]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[38]['Price']) ?></p>
                 </div>
             </div> 
@@ -385,18 +385,18 @@
 			<div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=7&Category_id=2&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[7]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=7&Category_id=2"><img src="<?php print_r($results[7]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[7]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=8&Category_id=2&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[8]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=8&Category_id=2"><img src="<?php print_r($results[8]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[8]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=14&Category_id=2&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[14]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=14&Category_id=2"><img src="<?php print_r($results[14]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[14]['Price']) ?></p>
                 </div>
             </div> 
@@ -404,18 +404,18 @@
 			<div class="row1">
                 <div class="col1">
                     <div class="row1 imgWrap">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=10&Category_id=2&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[10]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=10&Category_id=2"><img src="<?php print_r($results[10]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[10]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=11&Category_id=2&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[11]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=11&Category_id=2"><img src="<?php print_r($results[11]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[11]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=12&Category_id=2&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[12]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=12&Category_id=2"><img src="<?php print_r($results[12]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[12]['Price']) ?></p>
                 </div>
             </div> 
@@ -437,18 +437,18 @@
 			<div class="row1">
                 <div class="col1 imgWrap">
                     <div class="row1">
-                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=15&Category_id=3&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[15]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                        <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=15&Category_id=3"><img src="<?php print_r($results[15]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 						<p class="imgDescription2"><?php echo "$";print_r($results[15]['Price']) ?></p>
                     </div>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=16&Category_id=3&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[16]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=16&Category_id=3"><img src="<?php print_r($results[16]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[16]['Price']) ?></p>
                 </div>
                 
                 <div class="col1 imgWrap">
-                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=17&Category_id=3&Id=<?php echo $user_id ?>"><img src="<?php print_r($results[17]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
+                    <a href="LINKS/ArtDetailsLoggedIn.php?Product_id=17&Category_id=3"><img src="<?php print_r($results[17]['img_path']);?>" style="margin:9%;" width="350" height="400" class="sampleimg1"></a>
 					<p class="imgDescription2"><?php echo "$";print_r($results[17]['Price']) ?></p>
                 </div>
             </div>

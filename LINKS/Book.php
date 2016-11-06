@@ -129,7 +129,7 @@
 
 						  <h4>Total: <?php echo "$".$total ?></h4>
 						  <br/><br/><br/>
-					<a href="../Buyer_home.php?Id=<?php echo $user_id ?>" class="btn">Continue Shopping</a>
+					<a href="../Buyer_home.php" class="btn">Continue Shopping</a>
 
 
 					</div>
