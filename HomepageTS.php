@@ -3,10 +3,16 @@
 <html>
 	<?php
 		session_start();
-	
-		//echo $_SESSION["user_id"];
-		//session_destroy();
-		//exit;
+
+	foreach($_SESSION as $key => $val)
+	{
+		if ($key !== 'TS')
+		{
+		  unset($_SESSION[$key]);
+		}
+	}
+		
+	//echo "<script>alert(".$_SESSION['user'].")</script>";
 	
 	?>
 	

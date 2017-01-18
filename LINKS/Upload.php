@@ -2,6 +2,7 @@
 $target_dir = "../IMAGES/uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 //echo $target_file;
+//print_r($_FILES);
 global $File_name, $user_id;
 $File_name= basename( $_FILES["fileToUpload"]["name"]);
 

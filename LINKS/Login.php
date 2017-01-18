@@ -85,7 +85,7 @@
                     <div class="row">
                     <input type="submit" value="LOGIN" class="btn" name="submit"/>
                     
-                    <a href="Signup.html" class="btn1">SIGN UP</a>
+                    <a href="Signup.php" class="btn1">SIGN UP</a>
                     </div>    
                 </div>
             </form>
