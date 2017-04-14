@@ -27,6 +27,7 @@
 			$con= mysqli_connect("localhost","root","","Art_Gallery");
 			$query="select Price, Quantity from products where Product_id=$ID";
 			$res=mysqli_query($con, $query);
+			
 			$row1= mysqli_fetch_row($res);
 
 			$PerPrice= $row1[0];
